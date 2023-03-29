@@ -24,7 +24,7 @@ jobs:
   #  needs: [build-step, test-step]
   #  runs-on: ubuntu-latest
   #  steps:
-      - run: npm init playwright@latest
+      - run: npx playwright install
       - run: npx serve -s build & npx playwright test
 
 
