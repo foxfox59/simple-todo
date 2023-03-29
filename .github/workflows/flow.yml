@@ -14,6 +14,9 @@ jobs:
           node-version: '16'
       - run: npm install
       - run: npm run build
-      - run: npm run test --watchAll
-      
+  test-step:
+      needs: build-step
+      steps:
+        - run: npm run test --watchAll
+
       
