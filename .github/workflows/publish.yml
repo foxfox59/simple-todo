@@ -15,11 +15,11 @@ jobs:
           node-version: '16'
       - run: npm install
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v1.0.8
-
-
-  deploy-step:
+  artifact-step:
     needs: build-step
+      - uses: actions/upload-pages-artifact@v1.0.8
+  deploy-step:
+    needs: artifact-step
     permissions:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
