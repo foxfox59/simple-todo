@@ -15,8 +15,14 @@ jobs:
       - run: npm install
       - run: npm run build
   test-step:
-      needs: build-step
-      steps:
-        - run: npm run test --watchAll
+    needs: build-step
+    steps:
+      - run: npm run test --watchAll
+  e2e-step:
+    needs: build-step test-step
+    steps:
+      - run: npm init playwright@latest
+      - run: npx playwright test
+
 
       
