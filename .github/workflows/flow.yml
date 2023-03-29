@@ -21,11 +21,11 @@ jobs:
     steps:
       - run: npm run test --watchAll
   e2e-step:
-    needs: build-step test-step
+    needs: [build-step, test-step]
     runs-on: ubuntu-latest
     steps:
       - run: npm init playwright@latest
-      - run: npx playwright test
+      - run: npx serve -s build & npx playwright test
 
 
       
