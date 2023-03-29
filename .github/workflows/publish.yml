@@ -6,16 +6,16 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  build-step:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - run: npm install
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v1.0.8
+  # build-step:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '16'
+  #     - run: npm install
+  #     - run: npm run build
+  #     - uses: actions/upload-pages-artifact@v1.0.8
   deploy-step:
     needs: build-step
     permissions:
