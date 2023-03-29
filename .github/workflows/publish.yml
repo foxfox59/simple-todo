@@ -17,6 +17,7 @@ jobs:
       - run: npm run build
   artifact-step:
     needs: build-step
+    steps:
       - uses: actions/upload-pages-artifact@v1.0.8
   deploy-step:
     needs: artifact-step
