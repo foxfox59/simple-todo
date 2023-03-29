@@ -3,8 +3,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  font-family: 'Roboto Slab', serif;
-  background: rgb(147, 12, 12);
+  font-family: monospace;
+  background: rgb(247, 0, 230);
   background: linear-gradient(180deg, rgb(0, 0, 0) 30%, rgb(44, 44, 43) 100%, rgb(88, 88, 88) 100%);
-  color: white;
+  color: rgb(0, 0, 0);
 }
