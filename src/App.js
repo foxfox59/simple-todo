@@ -7,7 +7,7 @@ import './App.scss';
 const defaultTodos = [
   {
     id: uuid(),
-    title: 'Add more todos',
+    title: 'Adhd moore dodos',
   },
 ];
 
