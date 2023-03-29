@@ -15,10 +15,6 @@ jobs:
           node-version: '16'
       - run: npm install
       - run: npm run build
-  artifact-step:
-    needs: build-step
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/upload-pages-artifact@v1.0.8
   deploy-step:
     needs: artifact-step
