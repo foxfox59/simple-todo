@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 jobs:
   build-step:
     runs-on: ubuntu-latest
@@ -14,15 +15,17 @@ jobs:
           node-version: '16'
       - run: npm install
       - run: npm run build
-  test-step:
-    needs: build-step
-    steps:
+  # test-step:
+  #  needs: build-step
+  #  runs-on: ubuntu-latest
+  #  steps:
       - run: npm run test --watchAll
-  e2e-step:
-    needs: build-step test-step
-    steps:
-      - run: npm init playwright@latest
-      - run: npx playwright test
+  #e2e-step:
+  #  needs: [build-step, test-step]
+  #  runs-on: ubuntu-latest
+  #  steps:
+      - run: npx playwright install
+      - run: npx serve -s build & npx playwright test
 
 
       
