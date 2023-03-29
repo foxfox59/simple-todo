@@ -13,4 +13,7 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
-      - run: npm 
+      - run: npm run build
+      - run: npm run test --watchAll
+      
+      

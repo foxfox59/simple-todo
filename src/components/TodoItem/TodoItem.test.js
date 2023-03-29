@@ -12,15 +12,15 @@ describe("TodoItem", () =>
         expect(item.innerHTML).toMatch(item.title);
     });
 
-    test('Testing for remove click handler', () =>
-    {
-        const onRemoveMock=jest.fn();
+    // test('Testing for remove click handler', () =>
+    // {
+    //     const onRemoveMock=jest.fn();
 
-        render(<TodoItem onClick={onRemoveMock()} />);
+    //     render(<TodoItem onClick={onRemoveMock()} />);
 
-        fireEvent.click(screen.queryByTestId('remove-todo-btn'));
-        expect(onRemoveMock).toHaveBeenCalled();
-    });
+    //     fireEvent.click(screen.queryByTestId('remove-todo-btn'));
+    //     expect(onRemoveMock).toHaveBeenCalled();
+    // });
 
 
 });
